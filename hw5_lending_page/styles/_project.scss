@@ -1,0 +1,394 @@
+@import "variables";
+body {
+    background-color: lightgray;
+ }
+ .flex-container {
+    display: flex;
+}
+.main_page{
+    margin: 0 auto;
+    
+}
+header {
+    background-color: $background-color;
+    height: 466px;
+    border-bottom: 6px solid $primary-color;
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    font-family: $headres-font-famyly; 
+
+    .header-logo{
+        width: 466px;
+        margin-left: 26px;
+    }
+    .site-name{
+        color: $primary-color;
+        align-self: center;
+        width: 665px;
+        font-size: 48px;
+        padding-left: 43px;
+        padding-top: 5px;
+        line-height: 1.2; //межстрочный интервал
+        letter-spacing: -0.5px; //расстояное между буквами
+        text-transform: uppercase; //весь текст заглавными буквами
+        align-self: center;
+    }
+    .logo-name{
+        position: absolute;
+        color: $logo-color;
+        font-size: 84px;
+        padding-left: 140px;
+        padding-top: 176px;
+        font-weight: bold;
+        letter-spacing: -3.5px;
+    }
+    
+}
+.content{
+    background-color: $background-color;
+    width: 1200px;
+    margin: 0 auto;
+    height: 1284px;
+
+    .center-container{
+        width: 948px;
+        margin: 0 auto;
+        padding-left: 8px;
+
+        .navigation-bar{
+            height: 122px;
+            justify-content: space-between;
+            
+
+            .nav-site-logo{
+                width: 68px;
+                height: 68px;
+                padding-top: 28px;
+            }
+            .site-name{
+                font-family: $headres-font-famyly;
+                color: $primary-color; 
+                font-size: 34px;
+                padding-top: 42px;
+                padding-left: 12px;
+                letter-spacing: -0.5px; 
+            }
+            .logo-name{
+                font-family: $headres-font-famyly; 
+                position: absolute;
+                color: $logo-color;
+                font-size: 27px;
+                margin-left: 22px;
+                margin-top: 45px;
+                font-weight: bold; 
+            }
+
+            .main-menu{
+                align-items: center;
+                width: 560px;
+                justify-content: space-between;
+                
+
+                .nav-item{
+                   
+                    margin-top: -3px;
+                    font-family: "Open Sans", Arial, sans-serif;
+                    letter-spacing: 0.8px;
+                    
+                    .menu-item-name{
+                        margin-left: 3px;
+                        font-size: 17px;
+                        text-decoration: none;
+                        color: $menu-text-color;
+                    }
+                    .menu-about-img{
+                        & ~ .menu-item-name{
+                            margin-left: 7px;
+                            letter-spacing: 0.1px;
+                        }
+                    }
+                    .menu-services-img{
+                        & ~ .menu-item-name{
+                            margin-left: 10px;
+                            letter-spacing: -0.6px;
+                        }
+                    }
+                    .menu-contact-img{
+                        & ~ .menu-item-name{
+                            letter-spacing: 0.1px;
+                            margin-left: 5px;       
+                        }
+                    }
+                }
+            }
+        }
+       
+    }
+}
+
+.carousel{
+    position: relative;
+    height: 452px;
+    width: 948px;
+
+    .carousel-button-img{
+        width: 34px;
+        height: 62px;
+    }
+    %button-active{
+        width: 30px;
+        height: 58px;
+        overflow: hidden;   
+    }
+    .carousel-button-prev{
+        @extend .carousel-button-img;
+        position: absolute;
+        //margin-top: 190px;
+        //сдвинуть верхний край кнопки на середину картинки карусели
+        top: 50%;
+        //Сдвигает элемент по вертикали на указанное значение. Положительное значение сдвигает вниз, отрицательное вверх.
+        transform: translateY(-50%);//сдвинуть элемент вверх на 50% от его размера
+
+        padding: 0;
+        border: 0;
+        outline: none;//убирает пунктир при нажатии
+        &:active{
+            @extend %button-active; 
+           // margin-top: 192px;
+            //margin-left: 2px; 
+           // top: 48%;
+           // transform: translateY(-48%)
+        }  
+    }
+    .carousel-button-next{
+        @extend .carousel-button-prev;
+       // margin-top: -262px;
+       //margin-left: 916px;
+
+       top: 50%;
+       left: 100%;
+       transform: translate(-100%,-50%);
+
+        outline: none; //убирает пунктир при нажатии
+        &:active{
+            @extend %button-active; 
+           // margin-top: -260px;
+           // margin-left: 916px;
+        } 
+    }
+    .gallery{
+        width: $carousel-img-width;
+        overflow: hidden; //Отображается только область внутри элемента карусель, остальное будет скрыто(т.е. только одна картинка). 
+    }
+
+    .images{
+        display: inline-flex;
+        height: $carousel-img-height;
+        width: $carousel_conteiner-width;
+        margin:0;
+        padding:0;
+        list-style:0;
+        list-style: none;
+        transition: margin-left 700ms; //Устанавливает эффект картинок карусели и время перехода от одной к другой
+
+    }
+    .carousel-image{
+        width: $carousel-img-width;
+        height: $carousel-img-height;
+        display: block;
+    }
+
+    .carousel-text{
+        position: absolute;
+       // margin-top: -332px;
+        //margin-left: 200px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-49%,-67%);
+
+        color: $logo-color;
+        text-align: center;
+
+        .carousel-text-name{
+            font-family: $carousel-logo-font-family;
+            font-size: 112px;
+            letter-spacing: 3px;//расстояние мужду буквами
+            line-height: 1.1; //межстрочный интервал
+            display: block;
+        }
+        .carousel-text-info{
+            width: 800px;
+            font-family: $headres-font-famyly;
+            font-size: 30px;
+            letter-spacing: -1.2px;//расстояние мужду буквами
+            display: block;
+        }
+    }
+}
+
+.quote-border{
+    height: 122px;
+    width: 926px;
+    border-top: 2px solid $primary-color;
+    border-bottom: 2px solid $primary-color;
+    margin: 36px 12px;
+    overflow: hidden;
+
+    .quote{
+        width:850px;
+        margin-top: 6px;
+        margin-left: 26px;
+
+        font-family: $quote-font-family;
+        font-style: italic;
+        text-align: center;
+        font-size: 21px;
+        line-height: 1.61;
+        letter-spacing: 0.2px;
+        word-spacing: -0.8px;
+
+        .text-color{
+            color:$primary-color;
+            font-weight: bold;
+        }
+    }
+}
+
+
+.post{
+    padding-bottom: 56px;
+    border-bottom: 2px solid $third-color;
+    height:287px;
+    
+    
+    .post-img{
+        width: 250px;
+        height: 250px;
+    }
+    .post-ava{
+        @extend .post-img;
+        margin-left: 24px;
+        margin-top: -7px;
+        border: 18px solid $secondary-color;
+        border-radius: 100%;
+        
+    }
+    .post-text-block{
+        padding-left: 34px;
+        font-family: $post-font-family;
+        padding-top: 10px;
+
+        .post-text-header{
+            font-size: 28px;
+            margin-bottom: 18px;
+        }
+        .post-text-conteiner{
+            flex-direction: column;
+            .post-text{
+                padding-left: 4px;
+                margin-right: 20px;
+                margin-bottom: 6px;
+                line-height: 1.63;//межстрочный интервал
+                letter-spacing: -0.9px;//расстояние мужду буквами
+                overflow: hidden;
+                height: 178px;
+            }
+            .post-more-link{
+                text-align: right;
+                font-size: 12px;
+                font-style: italic;
+                color: black;
+                letter-spacing: 0.2px;
+                text-decoration: none;
+            }
+        }
+        
+    }
+
+
+}
+
+.featured{
+    height: 126px;
+    flex-direction: column;
+    margin-top: -14px;
+    font-family: $post-font-family;
+
+    
+    .featured-header{
+        font-size: 20px;
+        font-weight: bold;
+        letter-spacing: 0.1px;
+        min-width: 302px;
+        margin-bottom: 30px;
+        background-color: $background-color;
+    }
+
+    .clients{
+        margin-top: 5px;
+    }
+    %client{
+        background-color: $secondary-color;
+        border: 2px solid $third-color;
+        padding: 12px 22px;
+        
+    }
+    .client-aboutcom{
+        @extend %client;
+        border-right: 0px;
+        height: 28px;
+        padding: 19px 29px;
+    }
+    .client-mashable{
+        @extend %client;
+        border-right: 0px;
+        height: 28px;
+        padding: 19px 29px;
+    }
+    .client-techcrunch{
+        @extend %client;
+        border-right: 0px;
+        height: 36px;
+        padding: 15px 32px;
+    }
+    .client-buisnessweek{
+        @extend %client;
+        height: 36px;
+        padding: 15px 36px;
+        width: 200px;
+    }
+    
+}
+
+footer{
+    background-color: $footer-background-color;
+    height: 62px;
+    width: 1200px;
+    border-bottom: 8px solid $primary-color;
+    margin: 0 auto;
+    .center-container{
+        justify-content: space-between;
+        align-items: center;
+        width: 948px;
+        margin: 0 auto;
+        padding-left: 8px;
+        
+        .copyright{
+            letter-spacing: -0.7px;
+            padding-top: 10px;
+        }
+        .social{
+           
+            .facebook{
+
+                margin-top: 18px;
+                margin-right: 14px;
+            }
+            .twitter{
+
+                margin-top: 18px;
+            }
+        }
+    }   
+}

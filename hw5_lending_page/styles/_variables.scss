@@ -1,0 +1,24 @@
+$primary-color: #82699d;;// #82699d;
+$secondary-color: #f5f5f5; //фон логотипов компаний
+$third-color: #e4e4e4; //рамка вокруг логотопов компаний
+$background-color: white;
+$logo-color: white; //white
+$menu-text-color: black;
+$footer-background-color: #e8e8e8;
+$headres-font-famyly: 'Noto Sans', sans-serif;
+$carousel-logo-font-family: 'Amaranth',sans-serif;
+$quote-font-family: 'SegoeUIRegular', sans-serif;
+$post-font-family: 'Open Sans',Arial,sans-serif;
+$carousel-img-width: 948px;
+$carousel-img-height: 452px;
+$carousel_conteiner-width: $carousel-img-width*10;
+
+@font-face {
+    font-family: 'SegoeUIRegular';
+    src: url("../fonts/SegoeUIRegular.eot");
+    src: url("../fonts/SegoeUIRegular.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/SegoeUIRegular.woff") format("woff"),
+    url("../fonts/SegoeUIRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
