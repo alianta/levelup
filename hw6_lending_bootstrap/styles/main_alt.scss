@@ -1,0 +1,202 @@
+@import "variables";
+
+/* Подложка (отключить после завершения работы) */
+.temp-for-background-site {
+    /*подложка-макет*/
+    background-image: url("../hw6_mart.jpg");
+    width: 1600px;
+    height: 7506px;
+    position:absolute;
+}
+
+
+/* Временно для разметки*/
+[class*="col"] {
+    border: 1px solid red;
+}
+.container {
+    border: 1px solid red;
+}
+.row {
+    border: 1px solid red;
+    height: 100%;
+}
+
+
+/* Основной блок сайта (полупрозрачный, чтобы сравниать с подложкой)*/
+.site{
+    opacity: 0.8;
+    width: 1600px;
+    height: 7506px;
+    margin: 0 auto; 
+}
+
+.login-footer {
+    max-width: 1600px;
+    height: 50px;
+    background-color: #1abc9c;
+    font-family: 'Open Sans Light', Arial;
+    font-size: 14px;
+    color: #fefefe;
+    letter-spacing: -0.3px;
+    white-space: nowrap;
+
+    .icon-font-phone {
+        font-size: 20px;
+        letter-spacing: -0.4px;
+        padding-left: 58px;
+    }
+    
+    .icon-font-mail {
+        font-size: 25px;
+        letter-spacing: -0.5px;
+    }
+}
+
+.main-navbar {
+    height: 91px;
+    background-color: white;
+}
+
+.carousel-header{
+    font-family: 'Roboto Light',Arial;
+    font-size: 48px;
+    letter-spacing: -1px;
+    color: #fffcfc;
+    .carousel-header-color{
+        color: #1abc9c;
+    }
+}
+
+.carusel-button-left{
+    width: 104px;
+    height: 104px;
+    background-color: #4ec6ab;
+    top: 50%;
+    transform: translateY(-72%);
+    font-size: 100px;
+    font-family: 'Pe-icon-7-stroke';
+}
+.carusel-button-right{
+    width: 104px;
+    height: 104px;
+    background-color: #4ec6ab;
+    top: 50%;
+    transform: translateY(-70%);
+    font-size: 100px;
+    font-family: 'Pe-icon-7-stroke';
+}
+.info-block{
+    height: 450px;
+    .info-block-icons{
+        font-family: 'Pe-icon-7-stroke';
+        font-size: 70px;
+        letter-spacing: -1.4px; 
+    }
+    .info-block-name{
+        font-family: 'Open Sans Semibold',Arial;
+        font-size: 18px;
+        letter-spacing: -0.4px;
+        line-height: 32px;
+    }
+    .info-block-text{
+        font-family: 'Open Sans Light',Arial;
+        font-size: 14px;
+        letter-spacing: -0.3px;
+        line-height: 24px;
+    }
+}
+
+.new-collection{
+    height: 676px;
+    background-color: #e9f0fd;
+    border: 1px solid black;
+}
+
+.featured-products{
+    height: 1166px;
+    background-color: #ffffff;
+    border: 1px solid black;
+}
+
+.sale-info{
+    height: 401px;
+    background-color: #030000;
+    border: 1px solid black;
+}
+
+.best-sellers{
+    height: 676px;
+    background-color: #e9f0fd;
+    border: 1px solid black;
+}
+
+.customer-review{
+    height: 824px;
+    border-color: #ffffff;
+    border: 1px solid black;
+}
+
+.newsletter{
+    height: 462px;
+    border: 1px solid black;
+    background-image: url("../img/newsletter.jpg");
+    .newsletter-header{
+        font-family: 'Roboto Black', Arial;
+        font-size: 48px;
+        letter-spacing: -1px;
+        color: #515151;
+    }
+    .devide-line-small{
+        width: 164px; 
+        height: 2px;
+        background-color: #ffffff;
+    }
+    .devide-line-big{
+        width: 164px;
+        height: 7px;
+        background-color: #ffffff;
+        margin-top: 2px;
+        margin-bottom: 2px;
+    }
+    .newsletter-text{
+        font-family: "Open Sans Light", "Open Sans", Arial;
+        font-size: 16px;
+        letter-spacing: -0.3px;
+        color: #ffffff;
+    }
+    .input-group-lg{
+        height: 60px;
+        width: 540px;
+    }
+}
+
+.our-partners{
+    height: 484px;
+    background-color: #e9f0fd;
+    border: 1px solid black;
+}
+
+.latest-news{
+    height: 828px;
+    background-color: #ffffff;
+    border: 1px solid black;
+}
+
+.get-in-touch{
+    height: 717px;
+    border: 1px solid red;
+}
+
+.footer{
+    height: 82px;
+    background-color: #000000;
+    font-family: 'Open Sans', Arial;
+    font-size: 16px;
+    letter-spacing: -0.3px;
+    text-align: center;
+    color: #fefefe;
+    .footer-text-contrast{
+        color: #46bfa9;
+    }
+}

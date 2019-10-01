@@ -1,0 +1,342 @@
+@charset "UTF-8";
+/*@font-face {
+    font-family: 'OpenSans-Semibold';
+    src:local('OpenSans-Semibold'), url("../fonts/OpenSans-Semibold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'OpenSans-Light';
+    src:local('OpenSans-Light'), url("../fonts/OpenSans-Light.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'OpenSans-Light';
+    src:local('OpenSans-Light'), url("../fonts/OpenSans-Light.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}*/
+@font-face {
+  font-family: 'Roboto-Light';
+  src: url("../fonts/Roboto-Light.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Roboto-Black';
+  src: url("../fonts/Roboto-Black.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+/* Подложка (отключить после завершения работы) */
+.temp-for-background-site {
+  /*подложка-макет*/
+  /* background-image: url("../hw6_mart.jpg");*/
+  width: 1600px;
+  height: 7506px;
+  position: absolute;
+}
+
+/* Временно для разметки*/
+[class*="col"] {
+  border: 1px solid red;
+}
+
+.container {
+  border: 1px solid red;
+}
+
+.row {
+  border: 1px solid red;
+  height: 100%;
+}
+
+/* Основной блок сайта (полупрозрачный, чтобы сравниать с подложкой)*/
+.site {
+  /*opacity: 0.7;*/
+  /* прозрачность сайта (чтобы просвечивала подложка с макетом)*/
+  width: 1600px;
+  height: 7506px;
+  margin: 0 auto;
+}
+
+.center-container {
+  width: 1140px;
+  border: 1px solid black;
+  margin: 0 auto;
+}
+
+.login-footer {
+  max-width: 1600px;
+  height: 50px;
+  background-color: #1abc9c;
+  font-family: 'Open Sans Light', Arial;
+  font-size: 14px;
+  color: #fefefe;
+  letter-spacing: -0.3px;
+  white-space: nowrap;
+}
+
+.login-footer .login-footer-menu-link {
+  color: #fefefe;
+}
+
+.login-footer .icon-font-phone {
+  font-size: 20px;
+  letter-spacing: -0.4px;
+}
+
+.login-footer .icon-font-mail {
+  font-size: 25px;
+  letter-spacing: -0.5px;
+}
+
+.main-navbar {
+  height: 91px;
+  background-color: white;
+}
+
+.main-navbar .logo-link {
+  font-family: 'Roboto Light';
+  font-size: 30px;
+  letter-spacing: -0.6px;
+  color: #555252;
+}
+
+.main-navbar .logo-link .logo-link-first-letter {
+  font-family: 'Roboto Black';
+  font-size: 30px;
+  letter-spacing: -0.6px;
+  color: #1abc9c;
+}
+
+.main-navbar .main-nav-menu {
+  font-family: 'Open Sans Bold';
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: -0.3px;
+}
+
+.main-navbar .main-nav-menu li > a {
+  color: #0f0101;
+}
+
+.main-navbar .main-nav-menu li:first-child > a {
+  color: #1abc9c;
+}
+
+.main-navbar .header-cart-link {
+  font-family: 'Open Sans';
+  font-size: 18px;
+  letter-spacing: -0.4px;
+  color: #0f0101;
+}
+
+.carousel-header {
+  font-family: 'Roboto Light',Arial;
+  font-size: 48px;
+  letter-spacing: -1px;
+  color: #fffcfc;
+}
+
+.carousel-header .carousel-header-color {
+  color: #1abc9c;
+}
+
+.carusel-button-left {
+  width: 104px;
+  height: 104px;
+  background-color: #4ec6ab;
+  top: 50%;
+  -webkit-transform: translateY(-72%);
+          transform: translateY(-72%);
+  font-size: 100px;
+  font-family: 'Pe-icon-7-stroke';
+}
+
+.carusel-button-right {
+  width: 104px;
+  height: 104px;
+  background-color: #4ec6ab;
+  top: 50%;
+  -webkit-transform: translateY(-70%);
+          transform: translateY(-70%);
+  font-size: 100px;
+  font-family: 'Pe-icon-7-stroke';
+}
+
+.info-block {
+  height: 450px;
+}
+
+.info-block .info-block-icons {
+  font-family: 'Pe-icon-7-stroke';
+  font-size: 70px;
+  letter-spacing: -1.4px;
+}
+
+.info-block .info-block-name {
+  font-family: 'Open Sans Semibold',Arial;
+  font-size: 18px;
+  letter-spacing: -0.4px;
+  line-height: 32px;
+}
+
+.info-block .info-block-text {
+  font-family: 'Open Sans Light',Arial;
+  font-size: 14px;
+  letter-spacing: -0.3px;
+  line-height: 24px;
+  color: blue;
+}
+
+.new-collection {
+  height: 676px;
+  background-color: #e9f0fd;
+  border: 1px solid black;
+}
+
+.featured-products {
+  height: 1166px;
+  background-color: #ffffff;
+  border: 1px solid black;
+}
+
+.sale-info {
+  height: 401px;
+  background-color: #030000;
+  border: 1px solid black;
+  color: #fffefe;
+}
+
+.sale-info .sale-info-header {
+  font-family: 'Open Sans Extrabold',Arial;
+  font-size: 60px;
+  letter-spacing: -1.2px;
+  line-height: 50px;
+}
+
+.sale-info .sale-info-info {
+  font-family: 'Open Sans Light',Arial;
+  font-size: 36px;
+  letter-spacing: -0.7px;
+  line-height: 50px;
+}
+
+.best-sellers {
+  height: 676px;
+  background-color: #e9f0fd;
+  border: 1px solid black;
+}
+
+.customer-review {
+  height: 824px;
+  border-color: #ffffff;
+  border: 1px solid black;
+}
+
+.newsletter {
+  height: 462px;
+  border: 1px solid black;
+  background-image: url("../img/newsletter.jpg");
+}
+
+.newsletter .newsletter-header {
+  font-family: 'Roboto Black', Arial;
+  font-size: 48px;
+  letter-spacing: -1px;
+  color: #515151;
+}
+
+.newsletter .devide-line-small {
+  width: 164px;
+  height: 2px;
+  background-color: #ffffff;
+}
+
+.newsletter .devide-line-big {
+  width: 164px;
+  height: 7px;
+  background-color: #ffffff;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.newsletter .newsletter-text {
+  font-family: "Open Sans Light", "Open Sans", Arial;
+  font-size: 16px;
+  letter-spacing: -0.3px;
+  color: #ffffff;
+}
+
+.newsletter .input-group-lg {
+  height: 60px;
+  width: 540px;
+}
+
+.newsletter .input-group-lg .button-text-layout {
+  border: none;
+}
+
+.newsletter .input-group-lg .email-button-group {
+  border: 3px solid white;
+  border-left: none;
+  border-radius: 5px;
+  border-radius: 0 5px 5px 0;
+}
+
+.newsletter .input-group-lg .email-button-group .email-button {
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 25px;
+  border: none;
+}
+
+.newsletter .input-group-lg .email-button-group .email-button .email-button-icon {
+  font-family: 'Pe-icon-7-stroke';
+  font-size: 50px;
+  color: white;
+}
+
+.our-partners {
+  height: 484px;
+  background-color: #e9f0fd;
+  border: 1px solid black;
+}
+
+.our-partners .our-partners-header {
+  font-family: 'Roboto Black';
+  font-size: 48px;
+  letter-spacing: -1px;
+  color: #555252;
+  text-align: center;
+}
+
+.latest-news {
+  height: 828px;
+  background-color: #ffffff;
+  border: 1px solid black;
+}
+
+.get-in-touch {
+  height: 717px;
+  border: 1px solid red;
+}
+
+.footer {
+  height: 82px;
+  background-color: #000000;
+  font-family: 'Open Sans', Arial;
+  font-size: 16px;
+  letter-spacing: -0.3px;
+  text-align: center;
+  color: #fefefe;
+}
+
+.footer .footer-text-contrast {
+  color: #46bfa9;
+}
+/*# sourceMappingURL=main.css.map */
