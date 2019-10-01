@@ -47,12 +47,9 @@
 > Технологии, использованные для реализации задания:
 
 
-
 - HTML
 
 - CSS
-
-
 
 
 # hw3_discussion
@@ -97,7 +94,6 @@
 - HTML
 - CSS
 - SASS
-
 
 
 # hw5_lending_page
