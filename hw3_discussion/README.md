@@ -12,7 +12,7 @@
 
 Макет:
 
-<img src="https://github.com/alianta/hw3_discussion/blob/develop/template.jpg">
+<img src="/hw3_discussion/template.jpg">
 
 
 В шапке - название обсуждения и информацию о том, кто и когда обсуждение создал.

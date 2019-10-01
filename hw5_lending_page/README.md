@@ -10,7 +10,7 @@
 
 Есть макет сайта:
 
-<img src="https://github.com/alianta/hw5_lending_page/blob/master/Minto.png">
+<img src="/hw5_lending_page/Minto.png">
 Cверстать почти 1 в 1 (настолько близко к макету, насколько будет возможным)
 Оживлять пока не надо
 
