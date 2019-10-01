@@ -1,0 +1,18 @@
+
+$mainFontStyle: 'Times New Roman', Times, serif;
+$mainFontColor: black;
+$headerFontStyle: 'Tamburin Modern';
+$penTextFontStyle: 'Pacifico';
+$linkTextStyle: Arial, Helvetica, sans-serif;
+
+
+@font-face{
+    font-family: 'Tamburin Modern';
+    src: url('../fonts/Tamburin_Modern.eot');
+    src: url('../fonts/Tamburin_Modern.eot?iefix') format('eot'),
+    url('../fonts/Tamburin_Modern.woff') format('woff'),
+    url('../fonts/Tamburin_Modern.ttf') format('truetype'),
+    url('../fonts/Tamburin_Modern.svg#webfont') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    }

@@ -1,0 +1,63 @@
+/* Поля ввода и ссылки */
+$buttonColor: blue;
+$buttonInnerShadow: #27496d;
+$buttonBackground: radial-gradient(#55ddff, #0081b5);
+$gitLinkStyle: 14px,yellow;
+
+input{
+    border-radius: 3px;
+    padding: 1px 3px;
+    &[type="checkbox"], &[type="radio"]{
+        cursor: pointer;
+    }
+    &[type="button"]{
+        cursor: pointer;
+        /*Сброс стандартных настроек кнопки  */
+        display: inline-block; /* блочный элемент с обтеканием */
+        margin: 0 0 0 10px ; /* отступ от границы элемента до родительского элемента */
+        padding: 5px 25px; /*  отступ от одержимого до границы */
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        background: $buttonBackground;
+        border: $borderWidth $borderStyle $borderColor;
+        border-radius: 5px;
+        box-shadow: inset 0 0 0 1px $buttonInnerShadow;
+    
+        &:hover{
+            color: $buttonColor;
+            box-shadow: inset 0 0 0 1px $buttonInnerShadow,0 5px 15px #193047;
+         }
+        &:active{
+            box-shadow: inset 0 0 0 2px $buttonInnerShadow,inset 0 5px 30px #193047;
+        }  
+    }
+    &:focus {
+        outline:none;
+    }
+}
+
+@mixin gitLink($size, $hoverColor, $baseColor: blue){
+    font: {
+        family: $linkTextStyle;
+        size: $size;
+        weight: bold;
+    }
+    line-height: 2;
+    text-decoration: underline;
+    color: $baseColor;
+
+    &:hover { /*при наведении курсора*/
+        color: $hoverColor;
+        text-decoration: none;
+    }
+
+
+}
+
+a{
+    @include gitLink($gitLinkStyle...);
+}
+
+
+

@@ -1,0 +1,103 @@
+$backgroundImg : url("../img/background_body.jpg");
+$bodyColor : #00323c;
+$hLine: 2; /*межстрочный интервал, стандартный 1,5*/
+$resumeWidth: 800px;
+$penTextColor: blue;
+$contentBgColor: lightblue;
+$contentBgOpacity: 0.8;
+$borderWidth: 1px;
+$borderStyle: solid;
+$borderColor: black;
+$itemNameFontWeight: bold;
+$inemNameTextDecoration: underline;
+
+@import "normalize.css"; 
+/* Шрифты */
+@import "fonts"; 
+@import "inputsButtonsLinks";
+
+
+body {
+    margin: 0 auto; /* отступ от границы элемента до родительского элемента */
+    width: $resumeWidth;
+    background-color: $bodyColor;
+    background-image: $backgroundImg;
+    line-height: $hLine; 
+    font-family: $mainFontStyle;
+    color: $mainFontColor;
+}
+h1{
+    text-align: center;
+    font-family: $headerFontStyle;
+}
+.pen-text{
+    color: $penTextColor;
+    font-family: $penTextFontStyle;
+}
+.center-container{
+    border: $borderWidth $borderStyle $borderColor;
+    padding: 0 30px 50px 30px; /*  отступ от одержимого до границы (слева и справа по 30px)*/
+    margin: 15px 0;
+    position: relative; /* Положение элемента устанавливается относительно его исходного места. нужно для работы z-index */
+}
+.page-content{
+    position: relative; /* Положение элемента устанавливается относительно его исходного места. нужно для работы z-index */
+    z-index: 1;
+}
+.main-resume-content{
+    padding: 0 30px; /*  Поле от одержимого до границы (слева и справа по 30px)*/
+}
+.bg{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 25px;
+    background-color: $contentBgColor;
+    opacity: $contentBgOpacity;
+}
+.portfolio_foto{
+    width: 150px;
+    border: 2px solid gold;
+}
+.email{
+    width: 100px;
+    position: fixed;
+    right: 80px;
+    bottom: 30px;
+}
+
+.fio-and-foto{
+    display: inline-block; /* отменяем перенос на новую строку блочного элемента,чтобы поставить блоки рядом*/
+    vertical-align: top; /* Выравнивароние по верхнему краю относительно родителя*/
+}
+.resume-foto{
+    @extend .fio-and-foto;
+    width: 30%;
+    overflow: hidden;
+    padding: 0 0 0 30px;
+}
+
+.resume-fio{
+    @extend .fio-and-foto;
+    padding: 0 20px; /*  Поле от одержимого до границы (слева и справа по 20px)*/
+    margin-right: 70px;
+}
+.resume-item-name{
+    font-weight: $itemNameFontWeight;
+    text-decoration: $inemNameTextDecoration;
+}
+table{
+    border-collapse: collapse;
+    border: $borderWidth $borderStyle $borderColor; /* Рамка вокруг таблицы */
+}
+td, th{
+    padding: 3px; /* Поля вокруг содержимого ячеек - от содержимого до границы ячейки */
+    border: $borderWidth+1 $borderStyle $borderColor; /* Рамка вокруг ячейки */ 
+    line-height: 1;
+}
+td+td{
+    @extend .pen-text;
+    @extend th;
+}
